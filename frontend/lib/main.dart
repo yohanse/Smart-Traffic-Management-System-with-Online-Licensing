@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/features/auth/presentation/pages/homepage.dart';
 import 'package:frontend/utility/theme.dart';
 
 void main() {
