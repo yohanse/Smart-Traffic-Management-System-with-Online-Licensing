@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/features/auth/presentation/widgets/continue_with_google_button.dart';
+import 'package:frontend/utility/or_line.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -13,25 +15,30 @@ class HomePage extends StatelessWidget {
             child: Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                  ' Let\'s you in officer',
-                  style: Theme.of(context).textTheme.bodyLarge,
-                ),
+                ' Let\'s you in officer',
+                style: Theme.of(context).textTheme.bodyLarge,
+              ),
             ),
           ),
           Expanded(
-            flex: 6,
-              child: Column(
-            children: [
-              ElevatedButton(
-                onPressed: () {},
-                child: const Text('Logout'),
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('Sign in with password'),
-              )
-            ],
-          )),
+              flex: 6,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 40),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  spacing: 10,
+                  children: [
+                    ContinueWithGoogleButton(),
+                    
+                    OrLine(),
+                    ElevatedButton(
+                      onPressed: () {},
+                      
+                      child: Text('Sign in with password'),
+                    )
+                  ],
+                ),
+              ),),
         ],
       ),
     );
