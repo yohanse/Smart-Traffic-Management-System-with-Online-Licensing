@@ -11,7 +11,7 @@ ThemeData lightTheme = ThemeData.light().copyWith(
     titleTextStyle: TextStyle(color: Colors.black),
   ),
   textTheme: const TextTheme(
-    bodyLarge: TextStyle(color: Colors.black),
+    bodyLarge: TextStyle(color: Colors.black, fontSize: 40, fontWeight: FontWeight.w900),
     bodyMedium: TextStyle(color: Colors.black),
   ),
 );
@@ -27,7 +27,7 @@ ThemeData darkTheme = ThemeData.dark().copyWith(
     titleTextStyle: TextStyle(color: Colors.white),
   ),
   textTheme: const TextTheme(
-    bodyLarge: TextStyle(color: Colors.white),
+    bodyLarge: TextStyle(color: Colors.white, fontSize: 40, fontWeight: FontWeight.w900),
     bodyMedium: TextStyle(color: Colors.white),
   ),
 );
