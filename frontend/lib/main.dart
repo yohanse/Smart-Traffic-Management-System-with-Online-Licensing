@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/features/auth/presentation/pages/homepage.dart';
-import 'package:frontend/features/auth/presentation/pages/loginpage.dart';
 import 'package:frontend/smart_traffic.dart';
-import 'package:frontend/utility/theme.dart';
+import 'injection.dart' as di;
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await di.init();
   runApp(MyApp());
 }
 
