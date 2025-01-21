@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/features/auth/presentation/pages/homepage.dart';
 import 'package:frontend/features/auth/presentation/pages/loginpage.dart';
+import 'package:frontend/smart_traffic.dart';
 import 'package:frontend/utility/theme.dart';
 
 void main() {
@@ -13,10 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: lightTheme,
-      darkTheme: darkTheme,
-      themeMode: ThemeMode.system,
-      home: LoginPage(),
+      home: SmartTrafficApp(),
     );
   }
 }
