@@ -9,6 +9,7 @@ abstract class AuthRemoteDataSource {
   AuthLocalDataSource get authLocalDataSource;
 
   Future<bool> logIn(String email, String password);
+  Future<bool> verifyGoogleToken(String idToken);
 }
 
 class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
@@ -23,6 +24,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
     final responseData = await http.post(Uri.parse(url),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({'email': email, 'password': password}));
+
     print(responseData.body);
     if (responseData.statusCode == 200 || responseData.statusCode == 201) {
       try {
@@ -39,5 +41,24 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
       throw UsernameAndPasswordDoesNotMatchException();
     }
     throw ServerException();
+  }
+
+  @override
+  Future<bool> verifyGoogleToken(String idToken) async {
+    String url = "http://192.168.188.105:8000/core/google-login/";
+    final responseData = await http.post(Uri.parse(url),
+        headers: {'Content-Type': 'application/json'},
+        body: jsonEncode({'token': idToken}));
+
+    print(responseData.body);
+    if (responseData.statusCode == 201) {
+      authLocalDataSource.cacheToken(
+        accessToken: jsonDecode(responseData.body)["access"],
+        refreshToken: jsonDecode(responseData.body)["refresh"],
+      );
+      return true;
+    } else {
+      throw Exception('Token verification failed');
+    }
   }
 }
