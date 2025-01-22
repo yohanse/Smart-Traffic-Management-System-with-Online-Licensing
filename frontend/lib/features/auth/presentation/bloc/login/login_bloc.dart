@@ -7,14 +7,14 @@ part 'login_state.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   final LogInUsecase logInUsecase;
-  LoginBloc({required this.logInUsecase}) : super(LoginInitial()) {
+  LoginBloc({required this.logInUsecase})
+      : super(LoginInitial()) {
     on<LoginStarted>((event, emit) async {
-      print("Click 2");
       emit(LoginLoading());
-      print("middleware");
-      var result = await logInUsecase(LogInParams(email: event.email, password: event.password));
-      print("Click 5");
-      result.fold((l) => emit(LoginFailure(message: l.message)), (r) => emit(LoginSuccess(success: r)));
+      var result = await logInUsecase(
+          LogInParams(email: event.email, password: event.password));
+      result.fold((l) => emit(LoginFailure(message: l.message)),
+          (r) => emit(LoginSuccess(success: r)));
     });
   }
 }
