@@ -1,6 +1,9 @@
 from django.db import models
 from django.conf import settings
 
+class Officer(models.Model):
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, primary_key=True)
+
 class ViolationType(models.Model):
     name = models.CharField(max_length=100, null=False, blank=False)
     description = models.TextField(null=True, blank=True)
@@ -56,3 +59,4 @@ class Driver(models.Model):
 
     def __str__(self):
         return f"{self.license_number} - {self.first_name} {self.last_name}"
+
