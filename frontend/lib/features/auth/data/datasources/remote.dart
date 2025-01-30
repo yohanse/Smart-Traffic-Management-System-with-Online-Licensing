@@ -20,7 +20,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
 
   @override
   Future<bool> logIn(String email, String password) async {
-    String url = "http://192.168.188.105:8000/auth/jwt/create/";
+    String url = "http://192.168.43.57:8000/auth/jwt/create/";
     final responseData = await http.post(Uri.parse(url),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({'email': email, 'password': password}));
@@ -45,7 +45,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
 
   @override
   Future<bool> verifyGoogleToken(String idToken) async {
-    String url = "http://192.168.188.105:8000/core/google-login/";
+    String url = "http://192.168.43.57:8000/core/google-login/";
     final responseData = await http.post(Uri.parse(url),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({'token': idToken}));
