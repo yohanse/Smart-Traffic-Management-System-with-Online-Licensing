@@ -9,6 +9,7 @@ import 'package:frontend/utility/theme.dart';
 import 'package:go_router/go_router.dart';
 
 import 'features/auth/presentation/bloc/login/login_bloc.dart';
+import 'features/face detection/page/face_detector_view.dart';
 
 class SmartTrafficApp extends StatelessWidget {
   const SmartTrafficApp({super.key});
@@ -19,7 +20,7 @@ class SmartTrafficApp extends StatelessWidget {
       routes: [
         GoRoute(
           path: "/",
-          builder: (context, state) => const HomePage(),
+          builder: (context, state) => HomePage(),
         ),
         GoRoute(
           path: "/login",
@@ -27,7 +28,7 @@ class SmartTrafficApp extends StatelessWidget {
         ),
         GoRoute(
           path: "/test",
-          builder: (context, state) => TestPage(),
+          builder: (context, state) => FaceDetectorView(),
         ),
       ],
     );

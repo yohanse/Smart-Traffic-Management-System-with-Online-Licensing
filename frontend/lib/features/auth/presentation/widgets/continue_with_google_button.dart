@@ -32,7 +32,7 @@ class ContinueWithGoogleButton extends StatelessWidget {
             "   Continue with Google",
             style: Theme.of(context).textTheme.bodyMedium,
           ),),
-          icon: FaIcon(
+          icon: state is SigninwithgoogleLoading? null: FaIcon(
             FontAwesomeIcons.google, // Google icon from Font Awesome
             size: 24, // Color for the icon
           ),
