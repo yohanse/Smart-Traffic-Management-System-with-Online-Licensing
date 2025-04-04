@@ -1,0 +1,14 @@
+django
+djangorestframework
+djangorestframework-simplejwt
+djoser
+pymysql
+django-cors-headers
+django-allauth
+pillow
+mysqlclient
+opencv-python
+tensorflow
+deepface
+torch
+torchvision
