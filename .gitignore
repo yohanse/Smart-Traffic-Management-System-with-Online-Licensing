@@ -1,7 +1,141 @@
+#######################
+# Django Project (Backend)
+#######################
+
+# Python/Django specific
+Backend/*.log
+Backend/*.pot
+Backend/*.pyc
+Backend/__pycache__/
+Backend/db.sqlite3
+Backend/media/
+
+# Virtual environment
+Backend/env/
+Backend/.env
+Backend/.venv
+Backend/ENV/
+Backend/env.bak/
+Backend/venv.bak/
+
+# Python
+*.py[cod]
+*$py.class
+.python-version
+
+# Unit test / coverage
+Backend/htmlcov/
+Backend/.tox/
+Backend/.coverage
+Backend/.coverage.*
+Backend/.cache/
+Backend/.pytest_cache/
+Backend/nosetests.xml
+Backend/coverage.xml
+Backend/*.cover
+Backend/.hypothesis/
+
+# Jupyter Notebooks
+Backend/.ipynb_checkpoints
+
+# celery
+Backend/celerybeat-schedule.*
+
+# Packaging / Build
+Backend/.Python
+Backend/build/
+Backend/develop-eggs/
+Backend/dist/
+Backend/downloads/
+Backend/eggs/
+Backend/.eggs/
+Backend/lib/
+Backend/lib64/
+Backend/parts/
+Backend/sdist/
+Backend/var/
+Backend/wheels/
+Backend/*.whl
+Backend/*.egg-info/
+Backend/.installed.cfg
+Backend/*.egg
+Backend/*.manifest
+Backend/*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+#######################
+# Flutter Project (frontend)
+#######################
+
+# Flutter/Dart/Pub related
+frontend/.dart_tool/
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+frontend/.packages
+frontend/.pub-cache/
+frontend/.pub/
+frontend/build/
+frontend/doc/api/
+frontend/ios/Flutter/.last_build_id
+
+# Android Studio build artifacts
+frontend/android/app/debug/
+frontend/android/app/profile/
+frontend/android/app/release/
+
+# Symbolication & Obfuscation
+frontend/app.*.symbols
+frontend/app.*.map.json
+
+#######################
+# IDEs / Editors
+#######################
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
+
+# PyCharm & IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# IntelliJ generated
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/aws.xml
+.idea/**/contentModel.xml
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+.idea/**/gradle.xml
+.idea/**/libraries
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+#######################
 # Miscellaneous
+#######################
+
+*.bak
 *.class
-*.log
-*.pyc
 *.swp
 .DS_Store
 .atom/
@@ -12,174 +146,25 @@
 .swiftpm/
 migrate_working_dir/
 
-# IntelliJ related
-*.iml
-*.ipr
-*.iws
-.idea/
+# mkdocs
+/site
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# mypy
+.mypy_cache/
 
-# Flutter/Dart/Pub related
-**/doc/api/
-**/ios/Flutter/.last_build_id
-.dart_tool/
-.flutter-plugins
-.flutter-plugins-dependencies
-.pub-cache/
-.pub/
-/build/
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
 
-# Symbolication related
-app.*.symbols
+# SFTP configs
+sftp-config.json
 
-# Obfuscation related
-app.*.map.json
-
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
-
-
-# Django #
-*.log
-*.pot
-*.pyc
-__pycache__
-db.sqlite3
-media
-
-# Backup files # 
-*.bak 
-
-# If you are using PyCharm # 
-# User-specific stuff
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/**/usage.statistics.xml
-.idea/**/dictionaries
-.idea/**/shelf
-
-# AWS User-specific
-.idea/**/aws.xml
-
-# Generated files
-.idea/**/contentModel.xml
-
-# Sensitive or high-churn files
-.idea/**/dataSources/
-.idea/**/dataSources.ids
-.idea/**/dataSources.local.xml
-.idea/**/sqlDataSources.xml
-.idea/**/dynamic.xml
-.idea/**/uiDesigner.xml
-.idea/**/dbnavigator.xml
-
-# Gradle
-.idea/**/gradle.xml
-.idea/**/libraries
-
-# File-based project format
-*.iws
-
-# IntelliJ
-out/
-
-# JIRA plugin
-atlassian-ide-plugin.xml
-
-# Python # 
-*.py[cod] 
-*$py.class 
-
-# Distribution / packaging 
-.Python build/ 
-develop-eggs/ 
-dist/ 
-downloads/ 
-eggs/ 
-.eggs/ 
-lib/ 
-lib64/ 
-parts/ 
-sdist/ 
-var/ 
-wheels/ 
-*.whl
-*.egg-info/ 
-.installed.cfg 
-*.egg 
-*.manifest 
-*.spec 
-
-# Installer logs 
-pip-log.txt 
-pip-delete-this-directory.txt 
-
-# Unit test / coverage reports 
-htmlcov/ 
-.tox/ 
-.coverage 
-.coverage.* 
-.cache 
-.pytest_cache/ 
-nosetests.xml 
-coverage.xml 
-*.cover 
-.hypothesis/ 
-
-# Jupyter Notebook 
-.ipynb_checkpoints 
-
-# pyenv 
-.python-version 
-
-# celery 
-celerybeat-schedule.* 
-
-# SageMath parsed files 
-*.sage.py 
-
-# Environments 
-.env 
-.venv 
-env/ 
-venv/ 
-ENV/ 
-env.bak/ 
-venv.bak/ 
-
-# mkdocs documentation 
-/site 
-
-# mypy 
-.mypy_cache/ 
-
-# Sublime Text # 
-*.tmlanguage.cache 
-*.tmPreferences.cache 
-*.stTheme.cache 
-*.sublime-workspace 
-*.sublime-project 
-
-# sftp configuration file 
-sftp-config.json 
-
-# Package control specific files Package 
-Control.last-run 
-Control.ca-list 
-Control.ca-bundle 
-Control.system-ca-bundle 
-GitHub.sublime-settings 
-
-# Visual Studio Code # 
-.vscode/* 
-!.vscode/settings.json 
-!.vscode/tasks.json 
-!.vscode/launch.json 
-!.vscode/extensions.json 
-.history
+# Package control
+Control.last-run
+Control.ca-list
+Control.ca-bundle
+Control.system-ca-bundle
+GitHub.sublime-settings
