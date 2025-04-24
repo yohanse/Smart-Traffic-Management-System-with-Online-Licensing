@@ -168,3 +168,17 @@ Control.ca-list
 Control.ca-bundle
 Control.system-ca-bundle
 GitHub.sublime-settings
+
+
+# Terraform specific ignores (within the terraform/ directory)
+terraform/.terraform/  # Ignore the .terraform directory (contains providers, modules, etc.)
+terraform/*.tfstate      # Ignore the main state file
+terraform/*.tfstate.* # Ignore state file backups and diffs
+terraform/crash.log      # Ignore crash logs
+terraform/*.tfplan       # Ignore plan files
+# Ignore override files that might contain local settings or secrets
+terraform/*_override.tf
+terraform/*_override.tf.json
+terraform/.terraformrc   # Ignore local Terraform configuration file
+terraform/terraform.rc   # Ignore local Terraform configuration file (alternative name)
+terraform/*.core         # Ignore core dump files
